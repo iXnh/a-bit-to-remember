@@ -1,0 +1,17 @@
+* {
+  background-color: #08161A;  
+  color: #bababa;
+}
+
+.main 
+{
+  font-size: 25px;
+  margin: 100px ;
+  text-align: left;
+
+  font-family: 'Quicksand', sans-serif;
+}
+a
+{
+ color: black;
+}
