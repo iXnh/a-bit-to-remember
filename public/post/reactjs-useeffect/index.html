@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html><title>A Bit to Remember  </title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reactjs UseEffect</title>
+    <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body><hr class="hr-header" />
+<header>
+        keep in your mind: don't get stuck in any learn cycle.
+</header>
+<hr class="hr-header"/>
+
+<style>
+   header {
+  background-color: #08161A;
+  color: #bababa;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+}
+
+.hr-header {
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background: #bababa;
+    background-image: linear-gradient(to right, #bababa, #08161A, #bababa);
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 0.8rem;
+    }
+}
+</style><div id="content">
+<head>
+<link rel="stylesheet" href="/css/single.css">
+</head>
+<div class="flex-parent">
+<h1><b>Reactjs UseEffect</b></h1>
+<p><b><p>useEffect is a hook that is used to perform side effects in function components. It is a combination of componentDidMount, componentDidUpdate, and componentWillUnmount. It is used to fetch data from the server, subscribe to events, and perform other side effects.</p>
+<p>in my case i will use useEffect to fetch data from the server</p>
+<p>first, you need to know lifecycle in reactjs</p>
+<p>secondly, you need to know how to use useEffect</p>
+<p>thirdly, you need to know how to fetch data from the server</p>
+<p>here my code</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">useState</span>, <span style="color:#a6e22e">useEffect</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">axios</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;axios&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">App</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">setData</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>([])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">useEffect</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;https://jsonplaceholder.typicode.com/users&#39;</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setData</span>(<span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>  }, [])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Reactjs</span> <span style="color:#a6e22e">UseEffect</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ul</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        {<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; (
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">li</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">id</span>}<span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/li&gt;</span>
+</span></span><span style="display:flex;"><span>        ))}
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/ul&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>
+</span></span></code></pre></div></b></p>
+<style>
+      * {
+            background-color: #08161A;  
+            color: #bababa;
+      }
+      .backlist {
+            padding-left: 10%;
+            margin-bottom: 2em;
+            color: #bababa;   
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+      }
+</style>
+</div> 
+<div class="backlist">
+      Back to <a href="/"> List</a>
+</div>
+
+
+
+    </div><hr class="hr-footer"/>
+<footer>
+    <a href="https://github.com/ikhsannh">Github</a>
+
+</footer>
+<hr class="hr-footer"/>
+
+<style> 
+footer {
+  background-color: #08161A;
+  color: #bababa;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+}
+
+.hr-footer {
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background: #bababa;
+    background-image: linear-gradient(to right, #bababa, #08161A, #bababa);
+}
+</style>
+
+</body>
+
+</html>

@@ -4,11 +4,7 @@ date: 2022-12-06T20:42:42+07:00
 draft: false
 ---
 
-nextjs mdx is syntax for markdown, it's like hugo frontmatter
-
-how to add frontmatter to nextjs mdx
-
-here i will show you how to add frontmatter to nextjs mdx
+nextjs mdx is syntax for markdown, here i will show you how to add frontmatter to nextjs mdx
 
 first, you need to install next-mdx-remote
 
@@ -69,7 +65,7 @@ and you need to add this code to package.json
 }
 ```
 
-and you need to run this command
+run this command
 ```bash
 npm run dev
 ```
@@ -79,7 +75,7 @@ and you need to open this url
 http://localhost:3000
 ```
 
-and you will see this
+you will see this
 ```mdx
 # Hello, world!
 ```
