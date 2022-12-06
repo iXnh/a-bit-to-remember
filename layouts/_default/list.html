@@ -1,0 +1,35 @@
+{{ define "main" }}
+<head>
+</head>
+<div class="main">
+<ul>{{ range .Pages }}
+<li>
+<b> <a class="list-a" href="{{.Permalink}}"> {{ .Title }}</a> </b>    
+</li>{{ end }}
+</ul>
+<style>
+.backhome {
+padding-left: 10%;
+margin-bottom: 2em;
+color: #bababa;   
+font-family: 'Quicksand', sans-serif;
+font-size: 1.1rem;
+}
+.backhome a {
+color: #bababa;}
+ul {
+list-style-type: none;
+}
+li {
+margin: 0 0 1em 0;
+}
+.list-a {
+color: #bababa;
+font-size: 1.5em;
+}
+</style>
+</div>
+<div class="backhome">
+      Back to <a href="/"> Home</a>
+</div>
+{{ end }}

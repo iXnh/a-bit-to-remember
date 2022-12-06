@@ -1,0 +1,27 @@
+{{ define "main" }}
+<head>
+<link rel="stylesheet" href="/css/single.css">
+</head>
+<div class="flex-parent">
+<h1><b>{{ .Title }}</b></h1>
+<p><b>{{ .Content }}</b></p>
+<style>
+      * {
+            background-color: #08161A;  
+            color: #bababa;
+      }
+      .backlist {
+            padding-left: 10%;
+            margin-bottom: 2em;
+            color: #bababa;   
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+      }
+</style>
+</div> 
+<div class="backlist">
+      Back to <a href="/"> List</a>
+</div>
+
+
+{{ end }}

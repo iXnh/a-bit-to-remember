@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="main">
+      <br>
+      <br>
+      <h2>
+            Wahoo!👋🏼 Welcome to my site .. I help myself to write here. 
+            Please feel free to read and comment. I'm still learning, so please be kind.😊
+            <hr>
+      </h2>
+      <br>
+      <br>
+      <ul>{{ range .Pages }}
+            <li>
+            <b> <a href="{{.Permalink}}"> {{ .Title }}</a> </b>    
+            </li>{{ end }}
+            </ul>
+</div>
+
+{{ end }}
