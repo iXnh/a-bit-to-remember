@@ -1,0 +1,18 @@
+* {
+  background-color: #08161A;  
+  color: #bababa;
+}
+
+.flex-parent 
+{
+  width: 60%;
+  margin: 100px auto;
+}
+h1 {
+  font-size:35px ;
+  font-family: 'Quicksand', sans-serif;
+}
+p {
+  font-size: 20px;
+  font-family: Nunito Sans, sans-serif;
+}
