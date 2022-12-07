@@ -10,7 +10,7 @@
 
 <body><hr class="hr-header" />
 <header>
-        keep in your mind: don't get stuck in any learn cycle.
+        keep in mind: don't get stuck in any learn cycle.
 </header>
 <hr class="hr-header"/>
 
@@ -37,13 +37,26 @@
         font-size: 0.8rem;
     }
 }
+
+ @media  screen and (max-width: 380px) {
+    header {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    header {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+    
+}
+
+
 </style><div id="content">
-<head>
-<link rel="stylesheet" href="/css/single.css">
-</head>
 <div class="flex-parent">
-<h1><b>Reactjs UseEffect</b></h1>
-<p><b><p>useEffect is a hook that is used to perform side effects in function components. It is a combination of componentDidMount, componentDidUpdate, and componentWillUnmount. It is used to fetch data from the server, subscribe to events, and perform other side effects.</p>
+      <h1><b>Reactjs UseEffect</b></h1>
+      <p><b><p>useEffect is a hook that is used to perform side effects in function components. It is a combination of componentDidMount, componentDidUpdate, and componentWillUnmount. It is used to fetch data from the server, subscribe to events, and perform other side effects.</p>
 <p>in my case i will use useEffect to fetch data from the server</p>
 <p>first, you need to know lifecycle in reactjs</p>
 <p>secondly, you need to know how to use useEffect</p>
@@ -77,22 +90,79 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>
 </span></span></code></pre></div></b></p>
-<style>
-      * {
-            background-color: #08161A;  
-            color: #bababa;
-      }
-      .backlist {
-            padding-left: 10%;
-            margin-bottom: 2em;
-            color: #bababa;   
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.1rem;
-      }
-</style>
-</div> 
+      <style>
+            * {
+                  background-color: #08161A;
+                  color: #bababa;
+            }
+
+            .backlist {
+                  padding-left: 10%;
+                  margin-bottom: 2em;
+                  color: #bababa;
+                  font-family: 'Quicksand', sans-serif;
+                  font-size: 1.1rem;
+            }
+
+            .flex-parent {
+                  width: 60%;
+                  margin: 100px auto;
+            }
+
+            h1 {
+                  font-size: 35px;
+                  font-family: 'Quicksand', sans-serif;
+            }
+
+            p {
+                  font-size: 20px;
+                  font-family: Nunito Sans, sans-serif;
+            }
+            code {
+                  font-size: 20px;
+            }
+
+            @media screen and (max-width: 415px) {
+                  .flex-parent {
+                        width: 90%;
+                  }
+                  h1 {
+                        font-size: 30px;
+                  }
+                  p {
+                        font-size: 15px;
+                  }
+                  code {
+                        font-size: 10px;
+                  }
+                  .backlist {
+                        font-size: 0.8rem;
+                        padding-left: 5%;
+            }
+                  
+            }
+
+
+            @media  screen and (max-width: 380px) {
+                  .flex-parent {
+                        width: 90%;
+                  }            
+                  
+                  h1 {
+                        font-size: 20px;
+                  }
+                  code {
+                        font-size: 10px;
+                  }
+                  .backlist {
+                        font-size: 0.8rem;
+                        padding-left: 5%;
+                  }
+            }
+      </style>
+</div>
 <div class="backlist">
-      Back to <a href="/"> List</a>
+      Back to <a href="/post"> List</a>
 </div>
 
 
@@ -121,8 +191,25 @@ footer {
     background: #bababa;
     background-image: linear-gradient(to right, #bababa, #08161A, #bababa);
 }
+
+a {
+    color: #bababa;
+}
+
+@media screen and (max-width: 415px) {
+    footer {
+        font-size: 1rem;
+        padding: 5px;
+    }
+    
+}
+
+@media  screen and (max-width: 380px) {
+    footer {
+        padding: 5px;
+    }
+}
 </style>
 
 </body>
-
 </html>

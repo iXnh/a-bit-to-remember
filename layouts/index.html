@@ -3,17 +3,63 @@
       <br>
       <br>
       <h2>
-            Wahoo!👋🏼 Welcome to my site .. I help myself to write here. 
+            Wahoo!👋🏼 Welcome to my site .. I help myself to write here.
             Please feel free to read and comment. I'm still learning, so please be kind.😊
-            <hr>
+            <hr class="hr-index">
       </h2>
       <br>
       <br>
-      <ul>{{ range .Pages }}
+      <ul class="tag-ul-index">{{ range .Pages }}
             <li>
-            <b> <a href="{{.Permalink}}"> {{ .Title }}</a> </b>    
+                  <b> <a class="tag-a-index" href="{{.Permalink}}"> {{ .Title }}</a> </b>
             </li>{{ end }}
-            </ul>
+      </ul>
 </div>
+
+<style>
+      .main {
+            color: #bababa;
+            padding: 10px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+      }
+
+      h2 {
+            font-size: 20px;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+      }
+
+      .tag-ul-index {
+            margin-top: -10px;
+            padding-left: 10%;
+
+      }
+
+      .tag-a-index {
+            color: #bababa;
+            text-decoration: none;
+      }
+
+      .hr-index {
+            width: 100%;
+            border: 0;
+            height: 1px;
+            background: #25d1c5;
+            background-image: linear-gradient(to right, #bababa, #08161A, #bababa);
+      }
+
+      @media screen and (max-width: 600px) {
+            .main {
+                  font-size: 0.8rem;
+            }
+      }
+
+      @media screen and (max-width: 380px) {
+            .main {
+                  padding: 5px;
+            }
+      }
+</style>
 
 {{ end }}

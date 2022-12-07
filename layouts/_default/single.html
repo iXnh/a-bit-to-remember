@@ -1,26 +1,80 @@
 {{ define "main" }}
-<head>
-<link rel="stylesheet" href="/css/single.css">
-</head>
 <div class="flex-parent">
-<h1><b>{{ .Title }}</b></h1>
-<p><b>{{ .Content }}</b></p>
-<style>
-      * {
-            background-color: #08161A;  
-            color: #bababa;
-      }
-      .backlist {
-            padding-left: 10%;
-            margin-bottom: 2em;
-            color: #bababa;   
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.1rem;
-      }
-</style>
-</div> 
+      <h1><b>{{ .Title }}</b></h1>
+      <p><b>{{ .Content }}</b></p>
+      <style>
+            * {
+                  background-color: #08161A;
+                  color: #bababa;
+            }
+
+            .backlist {
+                  padding-left: 10%;
+                  margin-bottom: 2em;
+                  color: #bababa;
+                  font-family: 'Quicksand', sans-serif;
+                  font-size: 1.1rem;
+            }
+
+            .flex-parent {
+                  width: 60%;
+                  margin: 100px auto;
+            }
+
+            h1 {
+                  font-size: 35px;
+                  font-family: 'Quicksand', sans-serif;
+            }
+
+            p {
+                  font-size: 20px;
+                  font-family: Nunito Sans, sans-serif;
+            }
+            code {
+                  font-size: 20px;
+            }
+
+            @media screen and (max-width: 415px) {
+                  .flex-parent {
+                        width: 90%;
+                  }
+                  h1 {
+                        font-size: 30px;
+                  }
+                  p {
+                        font-size: 15px;
+                  }
+                  code {
+                        font-size: 10px;
+                  }
+                  .backlist {
+                        font-size: 0.8rem;
+                        padding-left: 5%;
+            }
+                  
+            }
+
+
+            @media  screen and (max-width: 380px) {
+                  .flex-parent {
+                        width: 90%;
+                  }            
+                  
+                  h1 {
+                        font-size: 20px;
+                  }
+                  code {
+                        font-size: 10px;
+                  }
+                  .backlist {
+                        font-size: 0.8rem;
+                        padding-left: 5%;
+                  }
+            }
+      </style>
+</div>
 <div class="backlist">
-      Back to <a href="/"> List</a>
+      Back to <a href="/post"> List</a>
 </div>
 
 

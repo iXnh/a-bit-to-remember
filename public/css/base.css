@@ -33,22 +33,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-#links {
-  text-align: left;
-  margin-top: 20px;
-  font-size: 1.1rem;
-}
-
-#links a {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-#links a:hover {
-  color: #fff;
-}
-
-
 
 @media screen and (max-width:600px) {
   .main {

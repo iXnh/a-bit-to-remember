@@ -13,12 +13,11 @@
       <pubDate>Tue, 06 Dec 2022 20:42:42 +0700</pubDate>
       
       <guid>https://nashkispace.me/post/nextjs-mdx/</guid>
-      <description>nextjs mdx is syntax for markdown, it&amp;rsquo;s like hugo frontmatter
-how to add frontmatter to nextjs mdx
-here i will show you how to add frontmatter to nextjs mdx
+      <description>nextjs mdx is syntax for markdown, here i will show you how to add mdx to nextjs project
 first, you need to install next-mdx-remote
 secondly, you need to create a file named next.config.js then you need to add this code to next.config.js
-module.exports = { pageExtensions: [&amp;#39;js&amp;#39;, &amp;#39;jsx&amp;#39;, &amp;#39;mdx&amp;#39;], } thirdly, you need to create a file named mdx.js then you need to add this code to mdx.</description>
+module.exports = { pageExtensions: [&amp;#39;js&amp;#39;, &amp;#39;jsx&amp;#39;, &amp;#39;mdx&amp;#39;], } thirdly, you need to create a file named mdx.js then you need to add this code to mdx.js
+import { serialize } from &amp;#39;next-mdx-remote/serialize&amp;#39; import { MDXRemote } from &amp;#39;next-mdx-remote&amp;#39; export async function getStaticProps() { const mdxSource = await serialize(&amp;#39;Hello, world!</description>
     </item>
     
     <item>
