@@ -2,12 +2,11 @@
 <div class="flex-parent">
       <h1><b>{{ .Title }}</b></h1>
       <p><b>{{ .Content }}</b></p>
+</div>      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
       <style>
-            * {
-                  background-color: #08161A;
-                  color: #bababa;
-            }
-
             .backlist {
                   padding-left: 10%;
                   margin-bottom: 2em;
@@ -72,7 +71,7 @@
                   }
             }
       </style>
-</div>
+
 <div class="backlist">
       Back to <a href="/post"> List</a>
 </div>
