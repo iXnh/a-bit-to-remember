@@ -4,7 +4,8 @@
 <div class="main">
 <ul>{{ range .Pages }}
 <li>
-<b> <a class="list-a" href="{{.Permalink}}"> {{ .Title }}</a> </b>    
+<b> <a class="list-a" href="{{.Permalink}}"> {{ .Title }}</a> </b>  <br />
+<div id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </div>
 </li>{{ end }}
 </ul>
 <style>
@@ -15,6 +16,13 @@ color: #bababa;
 font-family: 'Quicksand', sans-serif;
 font-size: 1.1rem;
 }
+#date {
+border: 1px solid rgb(0, 0, 0);
+display: inline-block;
+margin-top: -20px;
+font-size: 12px;
+background-color: rgb(74, 74, 74);
+}
 .backhome a {
 color: #bababa;}
 ul {
@@ -24,6 +32,7 @@ li {
 margin: 0 0 1em 0;
 }
 .list-a {
+padding-bottom:4px;      
 color: #bababa;
 font-size: 1.5em;
 }
@@ -69,14 +78,6 @@ padding: 1px;
 }
 
 }
-
-
-
-
-
-
-
-
 </style>
 </div>
 <div class="backhome">

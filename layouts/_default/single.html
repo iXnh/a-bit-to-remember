@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="flex-parent">
-      <h1><b>{{ .Title }}</b></h1>
+      <h1><b>{{ .Title }}</b> <div id="date-single"> {{ .Date.Format "Mon Jan 2, 2006" }} </div></h1>
       <p><b>{{ .Content }}</b></p>
 </div>      
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css">
@@ -14,6 +14,14 @@
                   font-family: 'Quicksand', sans-serif;
                   font-size: 1.1rem;
             }
+
+            #date-single {
+                  font-size: 12px;
+                  text-decoration: none;
+                  border: 1px solid rgb(0, 0, 0);
+                  display: inline-block;
+                  background-color: rgb(74, 74, 74);
+              }
 
             .flex-parent {
                   width: 60%;
