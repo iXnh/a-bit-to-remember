@@ -5,7 +5,7 @@ draft: false
 ---
 
 
-in this case i will show you how to add route masking to nextjs
+in my case i will show you how to add route masking to nextjs
 
 first, you need to install next-routes
 
