@@ -9,16 +9,12 @@ what if I want use Material UI for Media Query, here we go!
 
 material-ui provide `useMediaQuery` hook to use media query in react component.
 just like any other hook, we need to import it first.
-    
-    ```js
+
     import { useMediaQuery } from '@mui/material/useMediaQuery';
-    ```
-    
-    then
-    
-    ```js
+
+then
+
     const isMobile = useMediaQuery('(max-width:600px)');
-    ```
 
 To change the width of the button when the screen is mobile or not.
 
