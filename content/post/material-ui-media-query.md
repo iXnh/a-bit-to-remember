@@ -5,7 +5,7 @@ draft: false
 ---
 
 
-what if I want use Material UI for Media Query, here we go!
+what if I want use Material UI for Media Query? here we go!
 
 material-ui provide `useMediaQuery` hook to use media query in react component.
 just like any other hook, we need to import it first.
